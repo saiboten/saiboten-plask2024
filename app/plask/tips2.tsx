@@ -3,20 +3,14 @@
 // disabled
 
 type Props = {
-  children: string;
   onClick: () => void;
-  disabled?: boolean;
 };
 
 export function ButtonUser() {
   const handleClick = () => console.log("knapp trykket");
-  return <SubmitButton onClick={handleClick}>Hei</SubmitButton>;
+  return <HeiKnapp onClick={handleClick} />;
 }
 
-function SubmitButton({ onClick, children, disabled }: Props) {
-  return (
-    <button disabled={disabled} onClick={onClick}>
-      {children}
-    </button>
-  );
+function HeiKnapp({ onClick }: Props) {
+  return <button onClick={onClick}>Hei</button>;
 }
