@@ -1,10 +1,12 @@
 type Routes = Record<string, string | { href: string; protected: boolean }>;
 
-export const advancedRoutes = {
+export const advancedRoutes: Routes = {
   overview: "/overview",
   admin: {
     href: "/admin",
     protected: true,
   },
-  details: "/pokemon/:id",
 };
+
+advancedRoutes.overview;
+advancedRoutes.admin;

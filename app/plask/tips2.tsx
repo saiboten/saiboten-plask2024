@@ -6,9 +6,13 @@ type Props = {
   onClick: () => void;
 };
 
-export function ButtonUser() {
+export function Page() {
   const handleClick = () => console.log("knapp trykket");
-  return <HeiKnapp onClick={handleClick} />;
+  return (
+    <div>
+      <HeiKnapp onClick={handleClick} />
+    </div>
+  );
 }
 
 function HeiKnapp({ onClick }: Props) {

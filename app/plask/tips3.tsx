@@ -4,7 +4,15 @@ type AddPokemon = {
   attack: number;
 };
 
-function addPokemon(pokemon: AddPokemon) {}
+function addPokemon(pokemon: AddPokemon) {
+  // Add pokemon
+}
+
+const newPokemon: AddPokemon = {
+  attack: 50,
+  hp: 100,
+  name: "Weedle",
+};
 
 type Pokemon = {
   id: number;
@@ -13,24 +21,7 @@ type Pokemon = {
   attack: number;
 };
 
-const newPokemon: AddPokemon = {
-  attack: 50,
-  hp: 100,
-  name: "Weedle",
-};
-
 addPokemon(newPokemon);
-
-
-
-
-
-
-
-
-
-
-
 
 // Omit<Type, Keys>
 // Pick<Type, Keys> - Motsatte av Omit
@@ -49,5 +40,3 @@ addPokemon(newPokemon);
 // Lowercase<StringType>
 // Capitalize<StringType>
 // Uncapitalize<StringType>
-
-
