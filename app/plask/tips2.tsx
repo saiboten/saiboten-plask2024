@@ -1,13 +1,18 @@
+import { ComponentProps } from "react";
+
 // Nye krav:
 // id
 // disabled
 
 type Props = {
-  onClick: () => void;
+  onClick: ComponentProps<"button">["onClick"];
 };
 
 export function Page() {
-  const handleClick = () => console.log("knapp trykket");
+  const handleClick: ComponentProps<"button">["onClick"] = (e) => {
+    console.log("knapp trykket");
+  };
+
   return (
     <div>
       <HeiKnapp onClick={handleClick} />
