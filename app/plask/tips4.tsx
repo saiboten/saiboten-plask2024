@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const routes = {
@@ -26,25 +27,23 @@ navigate(""); // ?
 
 // --------------------------------------------
 
-function useTypes() {
+function usePikachuDetails() {
   return [
-    { name: "water", weakness: "grass" },
-    { name: "grass", weakness: "fire" },
+    { name: "pikachu", attack: 50, hp: 100 },
+    { type: "lightning", weakness: "rock" },
   ];
 }
 
-function WeaknessTable() {
-  const [water, grass, fire] = useTypes();
+function PikachuProfile() {
+  const [pokemon, type, image] = usePikachuDetails();
 
   return (
-    <ul>
-      <li>
-        {water.name} - {water.weakness}
-      </li>
-      <li>
-        {grass.name} - {grass.weakness}
-      </li>
-      {fire.name} - {fire.weakness}
-    </ul>
+    <div>
+      <h1>
+        {pokemon.name}: HP: {pokemon.hp} Attack: {pokemon.attack}
+      </h1>
+      <div>Weakness: {type.weakness} </div>
+      <Image alt={image.name ?? ""} src={image.name ?? ""} />
+    </div>
   );
 }

@@ -15,11 +15,11 @@ export function Page() {
 
   return (
     <div>
-      <HeiKnapp onClick={handleClick} />
+      <HeiButton onClick={handleClick} />
     </div>
   );
 }
 
-function HeiKnapp({ onClick }: Props) {
+function HeiButton({ onClick }: Props) {
   return <button onClick={onClick}>Hei</button>;
 }
