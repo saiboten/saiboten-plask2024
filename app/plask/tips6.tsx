@@ -1,7 +1,7 @@
 function usePikachuDetails() {
   return [
     { name: "pikachu", attack: 50, hp: 100 } as PokemonDetails,
-    { type: "lightning", weakness: "rock" } as Type,
+    { type: "lightning", weakness: "rock" },
   ] as const;
 }
 
@@ -20,11 +20,6 @@ export function PikachuProfile() {
 
 interface PokemonDetails {
   name: string;
-  attack: number | (() => number);
+  attack: number | (() => number); // ?!
   hp: number;
-}
-
-interface Type {
-  type: "lightning" | "grass";
-  weakness: string;
 }
