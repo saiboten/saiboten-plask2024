@@ -34,7 +34,7 @@ function usePikachuDetails() {
   ];
 }
 
-function PikachuProfile() {
+export function PikachuProfile() {
   const [pokemon, type, image] = usePikachuDetails();
 
   return (
