@@ -23,6 +23,16 @@ type Pokemon = {
 
 addPokemon(newPokemon);
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Omit<Type, Keys>
 // Pick<Type, Keys> - Motsatte av Omit
 
